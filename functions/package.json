@@ -1,0 +1,42 @@
+{
+  "name": "functions",
+  "scripts": {
+    "build": "tsc && node ./build/functions/src/scrapers/cardScraper.js",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "12"
+  },
+  "main": "lib/functions/src/index.js",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "cheerio": "^1.0.0-rc.6",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "express": "^4.17.1",
+    "fast-xml-parser": "^3.19.0",
+    "firebase": "^8.4.3",
+    "firebase-admin": "^9.7.0",
+    "firebase-functions": "^3.11.0",
+    "fs": "0.0.1-security",
+    "got": "^11.8.2",
+    "he": "^1.2.0",
+    "jsdom": "^16.5.3",
+    "node-fetch": "^2.6.1",
+    "puppeteer": "^9.1.0",
+    "rss-parser": "^3.12.0",
+    "string-hash": "^1.1.3",
+    "xml-fetch": "^1.1.91",
+    "xml2js": "^0.4.23",
+    "xmlhttprequest": "^1.8.0"
+  },
+  "devDependencies": {
+    "firebase-functions-test": "^0.2.0",
+    "typescript": "4.2.4"
+  },
+  "private": true
+}
